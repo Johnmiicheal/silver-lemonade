@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="BlogPlatform.App.LoginPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Login">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+            
+            <Frame BackgroundColor="White" Padding="20">
+                <StackLayout Spacing="15">
+                    
+                    <Label Text="Login to Silver Lemonade" 
+                           FontSize="24" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center" 
+                           Margin="0,0,0,20" />
+                    
+                    <Label Text="Email" FontSize="16" />
+                    <Entry x:Name="EmailEntry" 
+                           Placeholder="Enter your email" 
+                           Keyboard="Email" />
+                    
+                    <Label Text="Password" FontSize="16" />
+                    <Entry x:Name="PasswordEntry" 
+                           Placeholder="Enter your password" 
+                           IsPassword="True" />
+                    
+                    <Button Text="Login" 
+                            BackgroundColor="DodgerBlue" 
+                            TextColor="White" 
+                            Clicked="OnLoginClicked" 
+                            Margin="0,20,0,0" />
+                    
+                    <Label Text="Don't have an account? Register here" 
+                           HorizontalOptions="Center" 
+                           TextColor="DodgerBlue">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRegisterTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
